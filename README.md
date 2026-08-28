@@ -22,7 +22,7 @@ Edit the `profile` object to update name, contact details, WhatsApp message, exp
 
 ```javascript
 whatsapp: "919870699971",
-whatsappMessage: "Hello Unmesh, we met at a networking event. I'd like to connect.",
+whatsappMessage: "Hi Unmesh, it was a pleasure connecting with you at the event. I'd be glad to stay in touch and explore opportunities to connect or collaborate.",
 ```
 
 ### Replacing Assets
