@@ -40,7 +40,7 @@ export const profile = {
   about:
     "I lead technology at TechBerry Infotech — across cloud, AI, infrastructure, and enterprise applications. My focus is building systems that are practical, reliable, and aligned with how businesses actually operate.",
   ctaSubtitle:
-    "Good conversations often lead to great opportunities.",
+    "It was great meeting you. Let's stay connected.",
   companyDescription:
     "TechBerry Infotech delivers end-to-end enterprise technology services — spanning infrastructure, software development, cloud migrations, security operations, and application support. Our passionate team partners with businesses to design, build, and maintain technology environments that are secure, scalable, and built to perform.",
 };

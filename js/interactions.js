@@ -15,7 +15,7 @@ export function initHeroTilt() {
   if (prefersReduced) return;
 
   const MAX_ROTATE_X = 3;
-  const MAX_ROTATE_Y = 4;
+  const MAX_ROTATE_Y = 3;
 
   let targetX = 0;
   let targetY = 0;
@@ -57,11 +57,11 @@ export function initHeroTilt() {
     inner.style.transform = `rotateX(${currentX}deg) rotateY(${currentY}deg)`;
 
     if (portrait) {
-      portrait.style.transform = `translateZ(24px) rotateX(${currentX * 1.15}deg) rotateY(${currentY * 1.15}deg)`;
+      portrait.style.transform = `translate3d(${currentY * 0.7}px, ${currentX * -0.45}px, 24px)`;
     }
 
     if (logo) {
-      logo.style.transform = `translateZ(12px) rotateX(${currentX * -0.1}deg) rotateY(${currentY * -0.1}deg)`;
+      logo.style.transform = `translate3d(${currentY * -0.25}px, ${currentX * 0.15}px, 12px)`;
     }
 
     if (glow) {
@@ -70,7 +70,8 @@ export function initHeroTilt() {
 
     if (sheen) {
       sheen.style.opacity = active ? "1" : "0";
-      sheen.style.backgroundPosition = `${sheenX}% ${sheenY}%`;
+      sheen.style.setProperty("--sheen-x", `${sheenX}%`);
+      sheen.style.setProperty("--sheen-y", `${sheenY}%`);
     }
 
     rafId = requestAnimationFrame(applyTransforms);

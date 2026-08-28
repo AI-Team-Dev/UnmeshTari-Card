@@ -71,7 +71,7 @@ function populateProfile() {
     expertiseList.innerHTML = profile.expertise
       .map((item) => {
         const wide = item.label.length > 28 ? " expertise-chip--wide" : "";
-        return `<li class="expertise-chip${wide}">${item.label}</li>`;
+        return `<li class="expertise-chip${wide}"><span class="expertise-chip__num">${item.num}</span><span class="expertise-chip__label">${item.label}</span><span class="expertise-chip__line" aria-hidden="true"></span></li>`;
       })
       .join("");
   }
@@ -100,6 +100,7 @@ function buildVCard() {
     `EMAIL:${profile.email}`,
     `URL:${profile.website}`,
     `URL:${profile.linkedin}`,
+    `ADR;TYPE=WORK:;;${profile.address.full.replace(/,/g, "\\,")};;;;`,
     "END:VCARD",
   ];
   return lines.join("\r\n");
@@ -177,10 +178,6 @@ function initStickyBar() {
   const heroActions = document.querySelector(".hero__actions");
   if (!stickyBar || !heroActions) return;
 
-  const prefersReduced = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
   const observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
@@ -194,9 +191,6 @@ function initStickyBar() {
 
   observer.observe(heroActions);
 
-  if (prefersReduced) {
-    stickyBar.classList.add("sticky-bar--visible");
-  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
