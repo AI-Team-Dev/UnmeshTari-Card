@@ -10,7 +10,7 @@ export const profile = {
   whatsapp: "919870699971",
   whatsappMessage:
     "Hi Unmesh, it was a pleasure connecting with you at the event. I'd be glad to stay in touch and explore opportunities to connect or collaborate.",
-  email: "unmeshtari@techberryinfotech.com",
+  email: "unmesh.tari@techberryinfotech.com",
   linkedin: "https://www.linkedin.com/in/unmeshtari",
   website: "https://www.techberryinfotech.com",
   address: {
