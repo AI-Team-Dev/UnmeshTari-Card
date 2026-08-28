@@ -3,7 +3,7 @@ name: Deploy Digital Business Card
 on:
   push:
     branches:
-      - main
+      - production
 
   workflow_dispatch:
 
